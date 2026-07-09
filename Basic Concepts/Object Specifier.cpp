@@ -7,7 +7,7 @@ private:
     int salary = 50000; 
 
 protected:
-    string wife = "Mrinmoyee";              //within the class ( all acess possible )
+    string wife = "Mrinmoyee";              //within the class ( all acess possible ) all are allowed 
 
 public:
     string rank = "Captain"; 
@@ -33,7 +33,7 @@ int main() {
 
     // ২. Private (Not Allowed - NO)
     // cout << rahul.salary; // ✗ COMPILER ERROR! 
-    // rahul.salary = 70000; // ✗ COMPILER ERROR! (salary is private)        //outside the class 
+    // rahul.salary = 70000; // ✗ COMPILER ERROR! (salary is private)          //outside the class (private / protected not allowed ) only publc allowed 
 
 
     // ৩. Protected (Not Allowed - NO)
@@ -72,7 +72,7 @@ public:
 
         // A) Public Member Access (Allowed)
         cout << "Rank from Parent: " << rank << endl; 
-        rank = "Major";                                           //inside a child class 
+        rank = "Major";                                           //inside a child class (public and protected are allowed ) not private 
 
         // B) Protected Member Access (Allowed)
         cout << "Wife name from Parent: " << wife << endl; 

@@ -23,5 +23,23 @@ public:
 int main() {
     Officer rahul;
     rahul.showAllDetailsWithinClass(); // no error
+
+    // ============ CONTEXT: Outside the Class (main function) ============================
+
+    // ১. Public (Allowed - YES)
+    cout << "Rank: " << rahul.rank << endl; // value can be print 
+    rahul.rank = "Major"; // value can be change 
+
+
+    // ২. Private (Not Allowed - NO)
+    // cout << rahul.salary; // ✗ COMPILER ERROR! 
+    // rahul.salary = 70000; // ✗ COMPILER ERROR! (salary is private)        //outside the class 
+
+
+    // ৩. Protected (Not Allowed - NO)
+    // cout << rahul.wife;   // ✗ COMPILER ERROR!
+    // rahul.wife = "Neha";  // ✗ COMPILER ERROR! (wife is protected)
     return 0;
 }
+
+

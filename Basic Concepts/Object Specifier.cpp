@@ -43,3 +43,49 @@ int main() {
 }
 
 
+
+
+
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Base Class
+class Officer {
+private:
+    int salary = 50000; // Hidden from everyone except Officer
+
+protected:
+    string wife = "Mrinmoyee"; // Hidden from main(), accessible to child classes
+
+public:
+    string rank = "Captain"; // Accessible to everyone
+};
+
+// Derived Class
+class Rahul : public Officer {
+public:
+    void testInsideChildClass() {
+        // Context: Inside a Derived Class
+
+        // A) Public Member Access (Allowed)
+        cout << "Rank from Parent: " << rank << endl; 
+        rank = "Major";                                           //inside a child class 
+
+        // B) Protected Member Access (Allowed)
+        cout << "Wife name from Parent: " << wife << endl; 
+        wife = "Mrs. Manna"; 
+
+        // C) Private Member Access (Not Allowed)
+        // cout << salary; // COMPILER ERROR: Private to Parent
+        // salary = 80000; // COMPILER ERROR: Private to Parent
+    }
+};
+
+int main() {
+    Rahul r;
+    r.testInsideChildClass();
+    return 0;
+}

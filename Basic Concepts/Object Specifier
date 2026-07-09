@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Officer {
+private:
+    int salary = 50000; 
+
+protected:
+    string wife = "Mrinmoyee";              //within the class ( all acess possible )
+
+public:
+    string rank = "Captain"; 
+
+    //(Within the Same Class)
+    void showAllDetailsWithinClass() {
+        cout << "Salary (Private): " << salary << endl;      // (Yes)
+        cout << "Wife (Protected): " << wife << endl;       //(Yes)
+        cout << "Rank (Public): " << rank << endl;          //(Yes)
+    }
+};
+
+int main() {
+    Officer rahul;
+    rahul.showAllDetailsWithinClass(); // no error
+    return 0;
+}

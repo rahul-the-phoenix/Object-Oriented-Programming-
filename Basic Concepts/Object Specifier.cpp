@@ -1,3 +1,17 @@
+// public
+// Members declared as public are accessible from anywhere in the entire program,
+// both inside and outside the class. They act as the open interface for users to interact with the object.
+
+// protected
+// Members declared as protected are hidden from the outside world (like main()) but 
+// remain fully accessible inside child classes. They are used specifically to share data safely through inheritance.
+
+// private
+// Members declared as private are strictly locked and can only be accessed within their own class.
+// Even child classes cannot access them, ensuring maximum security and data hiding.
+
+
+
 #include <iostream>
 #include <string>
 using namespace std;

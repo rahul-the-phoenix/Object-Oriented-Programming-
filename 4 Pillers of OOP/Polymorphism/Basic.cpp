@@ -1,9 +1,18 @@
+Compile-time polymorphism is an OOP feature where the compiler selects and binds the appropriate function or operator 
+to its implementation at the time of program compilation based on the number and type of arguments passed.
+
+ 
+In C++, this is achieved through Function Overloading and Operator Overloading.
+In java there is only method overloading not have operator overloading 
+
 
  compile time polymorphism : Function Overloading 
  all the same functions if stay on the same class then it is Function Overloading 
  all the same fiontions if stay on parent or class then it is Runtime Polymorphism : Function Overridding
  all the same functions if stay on different independent class then it's not a polymorphism (a1.display() / b1.display() ) 
 
+
+ 
 #include <iostream>
 using namespace std;
 
@@ -44,8 +53,9 @@ int main() {
 
 
 
-Operator Overloading : to use operators ( + , = , - , * , << , >> ) as a function
+compile time polymorphism : Operator Overloading : to use operators ( + , = , - , * , << , >> ) as a function
 remember : you cannot use this ( . (dot), .* (pointer to member), :: (scope resolution), ?: (ternary), and sizeof ) as a function
+(JAVA does not support Operator Overloading )
 
 Usecase : 
 natural syntax: it lets you use standard symbols like + or - directly on custom objects, making your code look clean and like natural mathematics.

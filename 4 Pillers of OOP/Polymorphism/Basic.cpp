@@ -1,6 +1,8 @@
 
-
-
+ compile time polymorphism : Function Overloading 
+ all the same functions if stay on the same class then it is Function Overloading 
+ all the same fiontions if stay on parent or class then it is Runtime Polymorphism : Function Overridding
+ all the same functions if stay on different independent class then it's not a polymorphism (a1.display() / b1.display() ) 
 
 
 
@@ -33,6 +35,7 @@ int main() {
     cout << "square area (side 5): " << cal.calculateArea(5) << endl;
     cout << "rectangle area (10 x 6): " << cal.calculateArea(10, 6) << endl;
     cout << "circle area (radius 4.5): " << cal.calculateArea(4.5) << endl;
+//  cout << "circle area (radius 4.5): " << cal.calculateArea(2,4,5,6) << endl;   //error as no function taking 4 eliments 
 
     return 0;
 }
